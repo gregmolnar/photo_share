@@ -8,3 +8,12 @@ class ActiveSupport::TestCase
 
   # Add more helper methods to be used by all tests here...
 end
+
+class ActionController::TestCase
+  include Devise::TestHelpers
+  include ActiveJob::TestHelper
+
+  def setup
+    @request.env["devise.mapping"] = Devise.mappings[:user]
+  end
+end
