@@ -47,3 +47,4 @@ end
 
 gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.x'
+gem 'simple-navigation'
