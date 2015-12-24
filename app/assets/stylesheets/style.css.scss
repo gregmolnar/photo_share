@@ -1,2 +1,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) {
+  .navbar-header{
+    margin-top: 20px;
+  }
+}
+
