@@ -8,7 +8,18 @@
 </head>
 <body>
 <div class="container">
+  <%= render_navigation %>
   <%= yield %>
 </div>
+<script type="text/javascript">
+$(document).ready(function(){
+  bridge.sendMessage(
+    {
+      action: 'update_navigation',
+      items: <%== render_navigation(context: :mobile) %>
+    }
+  );
+})
+</script>
 </body>
 </html>
